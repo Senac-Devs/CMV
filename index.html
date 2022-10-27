@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <script src="funcaoValidaNumero.js"></script>
     <script src="transformaStringNumber.js"></script>
     <script src="index.js"></script>
@@ -18,7 +17,7 @@
         <input type="text" id="ingrediente" required /><br />
         <label>Quantidade</label>
         <input type="number" id="quantidade" min="0" required /><br />
-        <label>Unidade</label
+        <label>Unidade</label>
         <select id="unidade" required>
             <option value=""></option>
             <optgroup label="Volume">
@@ -32,6 +31,18 @@
             </optgroup>
         </select><br>
         <input type="submit" value="confirmar" onclick="registraIngrediente()" />
+    </form>
+    <br /><br />
+
+    <form onsubmit="return false">
+
+        <label>Tempo de preparo em minutos</label>
+        <input type="text" id="tempoDePreparo" /></br>
+
+        <p><i> O tempo de preparo é opcional. <br> Aqui você pode colocar o tempo de forno, o tempo que a massa descansa
+                ou outro período que considerar relevante para calcular o custo.</i></p>
+        <p id="resultadoTempo"></p>
+        <input type="submit" value="confirmar" onclick="registraTempoDePreparo()" />
     </form>
     <br /><br />
     <form onsubm it="return false">
