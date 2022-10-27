@@ -4,6 +4,10 @@ function registraIngrediente() {
     let ingrediente = document.getElementById("ingrediente").value;
     let quantidade = document.getElementById("quantidade").value;
     quantidade = string2Number(quantidade);
+    if (!validaNumero(quantidade)) {
+        alert("Quantidade inválida");
+        return false
+    }
     let unidade = document.getElementById("unidade").value;
     ingredientes.push([ingrediente, quantidade, unidade]);
     console.log(ingredientes);
@@ -29,9 +33,17 @@ function registraPreco() {
     let ingrediente = document.getElementById("opcaoIngrediente").value;
     let quantidade = document.getElementById("quantidade-compra").value;
     quantidade = string2Number(quantidade);
+    if (!validaNumero(quantidade)) {
+        alert("Quantidade inválida");
+        return false
+    }
     let unidade = document.getElementById("unidade-compra").value;
     let preco = document.getElementById("preco-compra").value;
     preco = string2Number(preco);
+    if (!validaNumero(preco)) {
+        alert("Preço inválido");
+        return false
+    }
     precos.push([ingrediente, quantidade, unidade, preco]);
     console.log(precos)
     document.getElementById("opcaoIngrediente").value = ""
