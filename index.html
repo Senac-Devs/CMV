@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <script src="funcaoValidaNumero.js"></script>
     <script src="transformaStringNumber.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -13,26 +15,46 @@
 <body>
     <form onsubmit="return false">
         <label>Ingrediente</label>
-        <input type="text" id="ingrediente" /><br />
+        <input type="text" id="ingrediente" required /><br />
         <label>Quantidade</label>
-        <input type="number" id="quantidade" /><br />
-        <label>Unidade</label>
-        <input type="text" id="unidade" /><br />
+        <input type="number" id="quantidade" min="0" required /><br />
+        <label>Unidade</label
+        <select id="unidade" required>
+            <option value=""></option>
+            <optgroup label="Volume">
+                <option value="l">litro(s)</option>
+                <option value="ml">mililitro(s)</option>
+            </optgroup>
+            <optgroup label="Massa">
+                <option value="kg">quilo(s)</option>
+                <option value="g">grama(s)</option>
+                <option value="mg">miligrama(s)</option>
+            </optgroup>
+        </select><br>
         <input type="submit" value="confirmar" onclick="registraIngrediente()" />
     </form>
     <br /><br />
-    <form onsubmit="return false">
+    <form onsubm it="return false">
         <label>Ingrediente</label>
         <select id="opcaoIngrediente"></select><br />
         <label>Quantidade</label>
-        <input type="number" id="quantidade-compra" /> <br />
+        <input type="number" id="quantidade-compra" min="0" /> <br />
         <label>Unidade</label>
-        <input type="text" id="unidade-compra" /> <br />
+        <select id="unidade" required>
+            <option value=""></option>
+            <optgroup label="Volume">
+                <option value="ml">litro(s)</option>
+                <option value="ml">mililitro(s)</option>
+            </optgroup>
+            <optgroup label="Massa">
+                <option value="kg">quilo(s)</option>
+                <option value="g">grama(s)</option>
+                <option value="mg">miligrama(s)</option>
+            </optgroup>
+        </select><br>
         <label>Preço R$</label>
-        <input type="number" id="preco-compra" /> <br />
+        <input type="number" id="preco-compra" min="0" /> <br />
         <input type="submit" value="confirmar" onclick="registraPreco()" />
-
     </form>
 </body>
-
 </html>
