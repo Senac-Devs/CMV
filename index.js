@@ -51,3 +51,11 @@ function registraPreco() {
     document.getElementById("unidade-compra").value = ""
     document.getElementById("preco-compra").value = ""
 }
+
+function registraTempoDePreparo() {
+    let tempoDePreparo = document.getElementById("tempoDePreparo").value;
+    tempoDePreparo = Number(tempoDePreparo);
+    document.getElementById("tempoDePreparo").value = "";
+    document.getElementById("resultadoTempo").innerHTML = tempoDePreparo + " minutos.";
+}
+
