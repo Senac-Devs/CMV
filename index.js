@@ -25,7 +25,7 @@ function insereIngrediente(ingredientes) {
             "</option>";
     }
 }
-function registraPreco  (){
+function registraPreco() {
     let ingrediente = document.getElementById("opcaoIngrediente").value;
     let quantidade = document.getElementById("quantidade-compra").value;
     quantidade = string2Number(quantidade);
@@ -34,8 +34,16 @@ function registraPreco  (){
     preco = string2Number(preco);
     precos.push([ingrediente, quantidade, unidade, preco]);
     console.log(precos)
-    document.getElementById("opcaoIngrediente").value=""
-    document.getElementById("quantidade-compra").value=""
-    document.getElementById("unidade-compra").value=""
-    document.getElementById("preco-compra").value=""
+    document.getElementById("opcaoIngrediente").value = ""
+    document.getElementById("quantidade-compra").value = ""
+    document.getElementById("unidade-compra").value = ""
+    document.getElementById("preco-compra").value = ""
 }
+
+function registraTempoDePreparo() {
+    let tempoDePreparo = document.getElementById("tempoDePreparo").value;
+    tempoDePreparo = Number(tempoDePreparo);
+    document.getElementById("tempoDePreparo").value = "";
+    document.getElementById("resultadoTempo").innerHTML = tempoDePreparo + " minutos.";
+}
+
