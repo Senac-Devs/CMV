@@ -1,4 +1,4 @@
 function string2Number(numero) {
-  numero = parseInt(numero)
-  return numero;
+    numero = parseFloat(numero);
+    return numero;
 };
