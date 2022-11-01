@@ -4,7 +4,7 @@ body{
 h1{
      display: flex;
     justify-content: center;
- color: #a4161a;
+ color: #5a1fb2;
 }
 h2{
      display: flex;
@@ -34,6 +34,6 @@ select{
     border-radius: 10px ;
 }
 label{
-color: #dd0426;  
+color:#5a1fb2;
 }
 
