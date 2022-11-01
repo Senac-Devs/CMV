@@ -1,6 +1,6 @@
 let ingredientes = [];
 let precos = [];
-let tempoSalario= [];
+let tempoSalario = [];
 function registraIngrediente() {
     let ingrediente = document.getElementById("ingrediente").value;
     let quantidade = document.getElementById("quantidade").value;
@@ -61,26 +61,32 @@ function registraTempoDePreparo() {
 }
 
 function registraTempoSalario() {
-  let tempoTrabalhoHoras = document.getElementById("quantidade-tempo-trabalho-horas").value
-  console.log(tempoTrabalhoHoras)
-  tempoTrabalho = string2Number(tempoTrabalhoHoras)
-  console.log(tempoTrabalhoHoras)
-  let tempoTrabalhoMinutos = document.getElementById("quantidade-tempo-trabalho-minutos").value
-  console.log(tempoTrabalhoMinutos)
-  tempoTrabalho = string2Number(tempoTrabalhoMinutos)
-  console.log(tempoTrabalhoMinutos)
-  let salarioBase = document.getElementById("salario-base").value
-  salarioBase = string2Number(salarioBase)
-  tempoSalario.push([tempoTrabalho, salarioBase])
-  document.getElementById("quantidade-tempo-trabalho-horas").value = ""
-  document.getElementById("quantidade-tempo-trabalho-minutos").value = ""
-  document.getElementById("salario-base").value = ""
-  let valorHorasTrabalhado = tempoTrabalhoHoras / 220
-  let valorMinutoTrabalhado = tempoTrabalhoMinutos / 13200
-  let valorTempoTrabalhadoHora = valorHorasTrabalhado  * salarioBase
-  console.log(valorTempoTrabalhadoHora)
-  let valorTempoTrabalhadoMinuto = valorMinutoTrabalhado  * salarioBase
-  console.log(valorTempoTrabalhadoMinuto)
-  let valorTempoTotal = valorTempoTrabalhadoMinuto + valorTempoTrabalhadoHora
-  console.log(valorTempoTotal.toFixed(2))
+    let tempoTrabalhoHoras = document.getElementById("quantidade-tempo-trabalho-horas").value
+    console.log(tempoTrabalhoHoras)
+    tempoTrabalho = string2Number(tempoTrabalhoHoras)
+    console.log(tempoTrabalhoHoras)
+    let tempoTrabalhoMinutos = document.getElementById("quantidade-tempo-trabalho-minutos").value
+    console.log(tempoTrabalhoMinutos)
+    tempoTrabalho = string2Number(tempoTrabalhoMinutos)
+    console.log(tempoTrabalhoMinutos)
+    let salarioBase = document.getElementById("salario-base").value
+    salarioBase = string2Number(salarioBase)
+    tempoSalario.push([tempoTrabalho, salarioBase])
+    document.getElementById("quantidade-tempo-trabalho-horas").value = ""
+    document.getElementById("quantidade-tempo-trabalho-minutos").value = ""
+    document.getElementById("salario-base").value = ""
+    let valorHorasTrabalhado = tempoTrabalhoHoras / 220
+    let valorMinutoTrabalhado = tempoTrabalhoMinutos / 13200
+    let valorTempoTrabalhadoHora = valorHorasTrabalhado * salarioBase
+    console.log(valorTempoTrabalhadoHora)
+    let valorTempoTrabalhadoMinuto = valorMinutoTrabalhado * salarioBase
+    console.log(valorTempoTrabalhadoMinuto)
+    let valorTempoTotal = valorTempoTrabalhadoMinuto + valorTempoTrabalhadoHora
+    console.log(valorTempoTotal.toFixed(2))
 }
+function registraNovoCusto() {
+    let nomecusto = document.getElementById("nomeCustoAdicional")
+    let precocusto = document.getElementById("valorGastoAdicional")
+    let quantidacusto = document.getElementById("unidadeGa")
+
+};
