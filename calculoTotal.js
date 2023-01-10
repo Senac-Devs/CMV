@@ -2,7 +2,8 @@
 let precos = [];
 let tempoSalario = [];*/
 let custoTotal = 0;
-function atualizaPrecoTotal() {
+function atualizaPrecoTotal() { 
+    custoTotal = 0
     for (let i = 0; i < ingredientes.length; i++) {
         console.log(ingredientes[i])
 
