@@ -1,6 +1,7 @@
 let ingredientes = [];
 let precos = [];
 let tempoSalario = [];
+let gastoadicional = [];
 function registraIngrediente() {
     let ingrediente = document.getElementById("ingrediente").value;
     let quantidade = document.getElementById("quantidade").value;
@@ -85,8 +86,24 @@ function registraTempoSalario() {
     console.log(valorTempoTotal.toFixed(2))
 }
 function registraNovoCusto() {
-    let nomecusto = document.getElementById("nomeCustoAdicional")
-    let precocusto = document.getElementById("valorGastoAdicional")
-    let quantidacusto = document.getElementById("unidadeGa")
-
+     let nomeCusto = document.getElementById("nomeCustoAdicional").value
+     let quantidadeCusto = document.getElementById("quantidadenovoGasto").value
+     let unidadeCusto = document.getElementById("unidadeGA").value
+     let precoCusto = document.getElementById("valorGastoAdicional").value
+    quantidadeCusto = string2Number(quantidadeCusto);
+    if (!validaNumero(quantidadeCusto)) {
+        alert("Quantidade inválida");
+        return false
+    }
+    precoCusto= string2Number(precoCusto);
+    if (!validaNumero(precoCusto)) {
+        alert("Preço inválido");
+        return false
+    }
+    gastoadicional.push([nomeCusto,quantidadeCusto,unidadeCusto, precoCusto]);
+    console.log(gastoadicional)
+    document.getElementById("nomeCustoAdicional").value = ""
+    document.getElementById("quantidadenovoGasto").value = ""
+    document.getElementById("unidadeGA").value = ""
+    document.getElementById("valorGastoAdicional").value = ""
 };
