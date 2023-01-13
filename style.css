@@ -1,10 +1,10 @@
 body{
-  background-color: #b8dbd9;
+  background-color: #ebf2e5;
 }
 h1{
      display: flex;
     justify-content: center;
- color: #5a1fb2;
+ color: #076f6d;
 }
 h2{
      display: flex;
@@ -23,9 +23,9 @@ main{
 form{
 margin: 20px ;
 padding: 20px;
-background-color: #9ceaef;
+background-color: #e6e2da;
 border-radius: 15px;
-border: solid  5px #1f7a8c;
+border: solid  5px #0a0909;
 }
 input  {   
     border-radius: 10px;
