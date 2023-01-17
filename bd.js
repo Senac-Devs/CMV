@@ -65,22 +65,19 @@ function registraPreco() {
     };
 
     salvarPreco(precoProduto, precoQuantidade, precoUnidade);
-    
-    limparCamposReceitas();
-
-    exibeBD()
+    limparCamposCusto();
 };
 
-function salvarPreco(precoProduto, precoQuantidade, recoUnidade){
+function salvarPreco(precoProduto, precoQuantidade, precoUnidade){
     bd.transaction(function (inserir) {
         inserir.executeSql(
             "INSERT INTO custo (produto, quantidade, unidade) VALUES (?,?,?)",
-            [precoProduto, precoQuantidade, recoUnidade]
+            [precoProduto, precoQuantidade, precoUnidade]
         );
     });
-    };
+};
 
-function limparCamposReceitas(){
+function limparCamposCusto(){
     document.getElementById("opcaoIngrediente").value = "";
     document.getElementById("quantidade-compra").value = "";
     document.getElementById("unidade-compra").value = "";
