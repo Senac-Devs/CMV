@@ -1,39 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Rye&display=swap');
+
+
+
 body{
-  background-color: #b8dbd9;
+  background-color: #cce3de;
+  
 }
 h1{
-     display: flex;
+    display: flex;
     justify-content: center;
- color: #5a1fb2;
+    color: #00a896;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Rye', cursive;
+    
 }
 h2{
-     display: flex;
+    display: flex;
     justify-content: center; 
 }
 h3{
-display: flex;
+    display: flex;
     justify-content: center;
-   
+    
     margin-top:0px ;
 }
 main{
     display: flex;
     justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Rye', cursive;
 }
 form{
 margin: 20px ;
 padding: 20px;
-background-color: #9ceaef;
+background-color: #c0ebd9;
 border-radius: 15px;
 border: solid  5px #1f7a8c;
 }
 input  {   
-    border-radius: 10px;
+    border-radius: 15px;
  }
 select{
-    border-radius: 10px ;
+    border-radius: 15px ;
 }
 label{
-color:#5a1fb2;
+color:#024397;
 }
 
