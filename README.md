@@ -1,6 +1,4 @@
-# CMV
-Projeto de sistema para cálculo do Custo de Mercadoria Vendida (CMV), desenvolvido pela turma 178 de Programador de Sistemas do SENAC CM-PR
+# Custa Quanto?
+*Você faz, a gente calcula!*
 
-
-preço 
-
+Projeto de sistema para cálculo do Custo de Mercadoria Vendida (CMV), desenvolvido pela turma 178 de Programador de Sistemas do SENAC CM-PR.
