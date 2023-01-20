@@ -2,6 +2,7 @@ let ingredientes = [];
 let precos = [];
 let tempoSalario = [];
 let gastoadicional = [];
+
 function registraIngrediente() {
     let ingrediente = document.getElementById("ingrediente").value;
     let quantidade = document.getElementById("quantidade").value;
@@ -31,6 +32,7 @@ function insereIngrediente(ingredientes) {
             "</option>";
     }
 }
+
 function registraPreco() {
     let ingrediente = document.getElementById("opcaoIngrediente").value;
     let quantidade = document.getElementById("quantidade-compra").value;
