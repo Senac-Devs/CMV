@@ -5,13 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cadastro de Custos</title>
-        <link rel="stylesheet" href="style.css" />
+        <script src="./index.js"></script>
+        <script src="./bd.js"></script>
+        <script src="./itensReceitas.js"></script>
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <form onsubmit="return false">
             <h3>Formulário para cadastro de custos</h3>
             <label>Ingrediente</label>
-            <input type="text" id="opcaoIngrediente"/>
+            <select id="lista-bd"></select>
             <br />
             <label>Quantidade</label>
             <input type="number" id="quantidade-compra" min="0" /> <br />
