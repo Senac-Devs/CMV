@@ -2,41 +2,85 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Cadastro de Custos</title>
         <script src="./index.js"></script>
         <script src="./bd.js"></script>
         <script src="calculos.js"></script>
         <script src="./itensReceitas.js"></script>
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Cadastro de Custo-Quanto Custa?</title>
     </head>
     <body>
-        <form onsubmit="return false">
-            <h3>Formulário para cadastro de custos</h3>
-            <label>Ingrediente</label>
-            <select id="lista-bd"></select>
-            <br />
-            <label>Quantidade</label>
-            <input type="number" id="quantidade-compra" min="0" /> <br />
-            <label>Unidade</label>
-            <select id="unidade-compra" required>
-                <option value="und">(und) unidade(s)</option>
-                <optgroup label="Volume">
-                    <option value="l">(l) litro(s)</option>
-                    <option value="ml">(ml) mililitro(s)</option>
-                </optgroup>
-                <optgroup label="Massa">
-                    <option value="kg">(kg) quilograma(s)</option>
-                    <option value="g">(g) grama(s)</option>
-                    <option value="mg">(mg) miligrama(s)</option>
-                </optgroup></select
-            ><br />
-            <label>Preço R$</label>
-            <input type="number" id="opcaoIngrediente" min="0" /> <br />
-            <input type="submit" value="confirmar" onclick="registraPreco()" />
-        </form>
-        <button><a href="./index.html">voltar</a></button>
-        <button onclick="calculo()">concluir</button>
+        <header>
+            <h1 class="title">Quanto Custa?</h1>
+            <h2 class="sub-title">
+                Calculadora de custos de produção alimentícia
+            </h2>
+        </header>
+        <main>
+            <div class="nav">
+                <a class="button" href="./index.html">Início</a>
+                <a class="button" href="./cadastroCusto.html"
+                    >Cadastro de Custo</a
+                >
+                <a class="button" href="./tempoPreparo.html"
+                    >Tempo de Preparo</a
+                >
+                <a class="button" href="./tempoTrabalho.html"
+                    >Tempo de Trabalho</a
+                >
+                <a class="button" href="./gastoAdicionais.html"
+                    >Gastos Adicionais</a
+                >
+                <a class="button" href="./resultado.html">Resultados</a>
+            </div>
+            <div class="container">
+                <form onsubmit="return false">
+                    <h3>Formulário para cadastro de custos</h3>
+                    <section class="section-group">
+                        <label>Ingrediente</label>
+                        <select id="lista-bd"></select>
+                    </section>
+                    <section class="section-group">
+                        <label>Quantidade</label>
+                        <input type="number" id="quantidade-compra" min="0" />
+                    </section>
+                    <section class="section-group">
+                        <label>Unidade</label>
+                        <select id="unidade-compra" required>
+                            <option value="und">(und) unidade(s)</option>
+                            <optgroup label="Volume">
+                                <option value="l">(l) litro(s)</option>
+                                <option value="ml">(ml) mililitro(s)</option>
+                            </optgroup>
+                            <optgroup label="Massa">
+                                <option value="kg">(kg) quilograma(s)</option>
+                                <option value="g">(g) grama(s)</option>
+                                <option value="mg">(mg) miligrama(s)</option>
+                            </optgroup>
+                        </select>
+                    </section>
+                    <section class="section-group">
+                        <label>Preço R$</label>
+                        <input type="number" id="opcaoIngrediente" min="0" />
+                    </section>
+                    <section class="section-group">
+                        <input
+                            class="button1"
+                            type="submit"
+                            value="Confirmar"
+                            onclick="registraPreco()"
+                        />
+                    </section>
+                </form>
+                <button onclick="calculo()">concluir</button>
+            </div>
+        </main>
     </body>
 </html>
