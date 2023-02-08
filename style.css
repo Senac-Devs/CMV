@@ -27,6 +27,7 @@ h4 {
     display: flex;
     justify-content: center;
     border: 3.5px solid;
+    font-family: "Libre Baskerville", serif;
 }
 main {
     display: flex;
