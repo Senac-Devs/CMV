@@ -2,34 +2,66 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tempo de preparo</title>
+        <title>Tempo de Preparo-Quanto Custa?</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
-
     <body>
-        <h3>Tempo de preparo</h3>
-        <form onsubmit="return false">
-            <label>Tempo de preparo em minutos</label>
-            <input type="text" id="tempoDePreparo" /><br />
-            <p>
-                <i>
-                    O tempo de preparo é opcional. <br />
-                    Aqui você pode colocar o tempo de forno, o tempo que a massa
-                    descansa ou outro período que considerar relevante para
-                    calcular o custo.</i
+        <header>
+            <h1 class="title">Quanto Custa?</h1>
+            <h2 class="sub-title">
+                Calculadora de custos de produção alimentícia
+            </h2>
+        </header>
+        <main>
+            <div class="nav">
+                <a class="button" href="./index.html">Início</a>
+                <a class="button" href="./cadastroCusto.html"
+                    >Cadastro de Custo</a
                 >
-            </p>
-            <p id="resultadoTempo"></p>
-            <input
-                type="submit"
-                value="confirmar"
-                onclick="registraTempoDePreparo()"
-            />
-        </form>
-        <br /><br />
-        <button><a href="./cadastroCusto.html">voltar</a></button>
-        <button><a href="./tempoTrabalho.html">proximo</a></button>
+                <a class="button" href="./tempoPreparo.html"
+                    >Tempo de Preparo</a
+                >
+                <a class="button" href="./tempoTrabalho.html"
+                    >Tempo de Trabalho</a
+                >
+                <a class="button" href="./gastoAdicionais.html"
+                    >Gastos Adicionais</a
+                >
+                <a class="button" href="./resultado.html">Resultados</a>
+            </div>
+            <div class="container">
+                <form onsubmit="return false">
+                    <h3>Tempo de preparo</h3>
+                    <section class="section-group">
+                        <label>Tempo de preparo em minutos</label>
+                        <input type="text" id="tempoDePreparo" />
+                    </section>
+                    <section class="section-group">
+                        <p>
+                            <i>
+                                O tempo de preparo é opcional. <br />
+                                Aqui você pode colocar o tempo de forno, o tempo
+                                que a massa descansa ou outro período que
+                                considerar relevante para calcular o custo.</i
+                            >
+                        </p>
+                        <p id="resultadoTempo"></p>
+                        <input
+                            class="button1"
+                            type="submit"
+                            value="Confirmar"
+                            onclick="registraTempoDePreparo()"
+                        />
+                    </section>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
