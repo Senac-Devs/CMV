@@ -90,7 +90,7 @@ function calculo() {
     bd.transaction(function (ler) {
         ler.executeSql("SELECT * FROM receita", [], function (ler, receita) {
             ler.executeSql("SELECT * FROM custo", [], function (ler, custo) {
-                calculacustos(receita, custo);
+                calculaCustos(receita, custo);
             });
         });
     });
