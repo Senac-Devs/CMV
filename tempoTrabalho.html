@@ -2,28 +2,71 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tempo de trabalho</title>
+        <title>Tempo de Trabalho-Quanto Custa?</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <form onsubmit="return false">
-            <h3>Tempo trabalhado</h3>
-            <label> Tempo Trabalhado em Horas</label>
-            <input type="number" id="quantidade-tempo-trabalho-horas" /> <br />
-            <label> Tempo Trabalhado em Minutos</label>
-            <input type="number" id="quantidade-tempo-trabalho-minutos" />
-            <br />
-            <label>Salario base R$</label>
-            <input type="number" id="salario-base" /> <br />
-            <input
-                type="submit"
-                value="confirma"
-                onclick="registraTempoSalario()"
-            />
-        </form>
-        <button><a href="./tempoPreparo.html">voltar</a></button>
-        <button><a href="./gastoAdicionais.html">proximo</a></button>
+        <header>
+            <h1 class="title">Quanto Custa?</h1>
+            <h2 class="sub-title">
+                Calculadora de custos de produção alimentícia
+            </h2>
+        </header>
+        <main>
+            <div class="nav">
+                <a class="button" href="./index.html">Início</a>
+                <a class="button" href="./cadastroCusto.html"
+                    >Cadastro de Custo</a
+                >
+                <a class="button" href="./tempoPreparo.html"
+                    >Tempo de Preparo</a
+                >
+                <a class="button" href="./tempoTrabalho.html"
+                    >Tempo de Trabalho</a
+                >
+                <a class="button" href="./gastoAdicionais.html"
+                    >Gastos Adicionais</a
+                >
+                <a class="button" href="./resultado.html">Resultados</a>
+            </div>
+            <div class="container">
+                <form onsubmit="return false">
+                    <h3>Tempo trabalhado</h3>
+                    <section class="section-group">
+                        <label> Tempo Trabalhado em Horas</label>
+                        <input
+                            type="number"
+                            id="quantidade-tempo-trabalho-horas"
+                        />
+                    </section>
+                    <section class="section-group">
+                        <label> Tempo Trabalhado em Minutos</label>
+                        <input
+                            type="number"
+                            id="quantidade-tempo-trabalho-minutos"
+                        />
+                    </section>
+                    <section class="section-group">
+                        <label>Salario base R$</label>
+                        <input type="number" id="salario-base" />
+                    </section>
+                    <section class="section-group">
+                        <input
+                            class="button1"
+                            type="submit"
+                            value="Confirma"
+                            onclick="registraTempoSalario()"
+                        />
+                    </section>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
