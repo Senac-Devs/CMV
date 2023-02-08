@@ -4,7 +4,7 @@ bd.transaction(function (criar) {
     criar.executeSql("CREATE TABLE receita (igrediente TEXT, quantidade LONG, unidade TEXT)");
 });
 bd.transaction(function (criar) {
-    criar.executeSql("CREATE TABLE custo (produto TEXT, quantidade LONG, unidade TEXT)");
+    criar.executeSql("CREATE TABLE custo (ingrediente LONG, preco LONG, quantidade LONG, unidade TEXT)");
 });
 
 function registraIngrediente() {
@@ -40,23 +40,24 @@ function limparCamposReceitas(){
 
 
 function registraPreco() {
-    const precoProduto = document.getElementById("opcaoIngrediente").value.toUpperCase();
-    const precoQuantidade = parseFloat(document.getElementById("quantidade-compra").value);
-    const precoUnidade = document.getElementById("unidade-compra").value;
-    if (precoProduto === "" || precoUnidade === "" || isNaN(precoQuantidade)) {
+    const preco = document.getElementById("opcaoIngrediente").value.toUpperCase();
+    const quantidade = parseFloat(document.getElementById("quantidade-compra").value);
+    const unidade = document.getElementById("unidade-compra").value;
+    const ingrediente = document.getElementById("lista-bd").value.toUpperCase();
+    if (preco === "" ||unidade === "" || isNaN(quantidade)) {
         alert("Campos em brancos");
         return false;
     };
 
-    salvarPreco(precoProduto, precoQuantidade, precoUnidade);
+    salvarPreco(ingrediente, preco, quantidade, unidade);
     limparCamposCusto();
 };
 
-function salvarPreco(precoProduto, precoQuantidade, precoUnidade){
+function salvarPreco(ingrediente, preco, quantidade, unidade){
     bd.transaction(function (inserir) {
         inserir.executeSql(
-            "INSERT INTO custo (produto, quantidade, unidade) VALUES (?,?,?)",
-            [precoProduto, precoQuantidade, precoUnidade]
+            "INSERT INTO custo (ingrediente, preco, quantidade, unidade) VALUES (?,?,?,?)",
+            [ingrediente, preco, quantidade, unidade]
         );
     });
 };
@@ -65,4 +66,5 @@ function limparCamposCusto(){
     document.getElementById("opcaoIngrediente").value = "";
     document.getElementById("quantidade-compra").value = "";
     document.getElementById("unidade-compra").value = "";
+    document.getElementById("lista-bd").value= "";
 };
