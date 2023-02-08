@@ -7,6 +7,7 @@
         <title>Cadastro de Custos</title>
         <script src="./index.js"></script>
         <script src="./bd.js"></script>
+        <script src="calculos.js"></script>
         <script src="./itensReceitas.js"></script>
         <link rel="stylesheet" href="./style.css" />
     </head>
@@ -36,6 +37,6 @@
             <input type="submit" value="confirmar" onclick="registraPreco()" />
         </form>
         <button><a href="./index.html">voltar</a></button>
-        <button><a href="./tempoPreparo.html">próximo</a></button>
+        <button onclick="calculo()">concluir</button>
     </body>
 </html>
