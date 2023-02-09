@@ -20,8 +20,18 @@ function calculaCustos(receita, custo) {
                 console.log(valorReceitaG);
             } else if (receita.rows[i].unidade === "mg") {
                 valorReceitaMg =
-               ((custo.rows[i].preco / custo.rows[i].quantidade) / (1000 * 1000))
+               (custo.rows[i].preco / custo.rows[i].quantidade) / (1000 * 1000) * receita.rows[i].quantidade;
+               console.log(valorReceitaMg);
             }
+        }/*else if (custo.rows[i].unidade === "g"){
+            if(receita.rows[i].unidade === "g"){
+                valorReceitaG =
+                (custo.rows[i].preco / custo.rows[i].quantidade) *
+                receita.rows[i].quantidade;
+                console.log(valorReceita)
+            }*/
+
         }
     }
-}
+    
+
