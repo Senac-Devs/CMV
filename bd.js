@@ -14,7 +14,8 @@ bd.transaction(function (criar) {
 function registraIngrediente() {
     const igredienteReceita = document
         .getElementById("ingrediente")
-        .value.toUpperCase();
+        .value.toUpperCase()
+        .trim();
     const quantidadeIgrediente = parseFloat(
         document.getElementById("quantidade").value
     );
@@ -27,8 +28,12 @@ function registraIngrediente() {
         alert("Campos em brancos");
         return false;
     }
+    let [novaQuantidade, novaUnidade] = converteUnidade(
+        quantidadeIgrediente,
+        unidadeIgrediente
+    );
 
-    salvarReceita(igredienteReceita, quantidadeIgrediente, unidadeIgrediente);
+    salvarReceita(igredienteReceita, novaQuantidade, novaUnidade);
 
     limparCamposReceitas();
 }
@@ -55,18 +60,22 @@ function limparCamposReceitas() {
 function registraPreco() {
     const preco = document
         .getElementById("opcaoIngrediente")
-        .value.toUpperCase();
+        .value.toUpperCase()
+        .trim();
     const quantidade = parseFloat(
         document.getElementById("quantidade-compra").value
     );
     const unidade = document.getElementById("unidade-compra").value;
-    const ingrediente = document.getElementById("lista-bd").value.toUpperCase();
+    const ingrediente = document
+        .getElementById("lista-bd")
+        .value.toUpperCase()
+        .trim();
     if (preco === "" || unidade === "" || isNaN(quantidade)) {
         alert("Campos em brancos");
         return false;
     }
-
-    salvarPreco(ingrediente, preco, quantidade, unidade);
+    let [novaQuantidade, novaUnidade] = converteUnidade(quantidade, unidade);
+    salvarPreco(ingrediente, preco, novaQuantidade, novaUnidade);
     limparCamposCusto();
 }
 
