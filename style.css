@@ -21,6 +21,37 @@ header h2 {
     font-size: 20px;
 }
 h3 {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 0px;
+}
+h4 {
+    border-radius: 20px;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    border: 3.5px solid;
+    font-family: "Libre Baskerville", serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    font-family: "Libre Baskerville", serif;
+    font-family: "Rye", cursive;
+}
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #c0ebd9;
+    border-radius: 15px;
+    border: solid 5px #0a0909;
+}
+input {
+    border-radius: 15px;
+}
+select {
+    border-radius: 15px;
     font-size: 35px;
 }
 hr {
